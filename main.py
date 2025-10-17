@@ -3,6 +3,7 @@
 import network
 import urequests
 import time
+import machine # Import the machine module for rebooting
 from machine import Pin
 import config # Import our credentials
 
@@ -105,7 +106,6 @@ def reset_thingspeak_command():
         print(f"Failed to reset ThingSpeak command: {e}")
 
 # --- Main Loop ---
-# --- Main Loop ---
 if connect_wifi():
     while True:
         try:
@@ -134,10 +134,19 @@ if connect_wifi():
             response.close()
 
         except OSError as e:
-            print(f"Network error: {e}")
-            # Force WiFi reconnect on network errors
+            print(f"A network error occurred: {e}")
+            # A network error is recoverable, so we just try to reconnect WiFi
             connect_wifi()
         except Exception as e:
-            print(f"An error occurred: {e}")
+            # This catches all other unexpected errors (JSON parsing, etc.)
+            print(f"🛑 A critical, unexpected error occurred: {e}")
+            print("Rebooting the device in 10 seconds...")
+            time.sleep(10) # Give time to read the error on the serial monitor
+            machine.reset() # Perform a soft reboot
 
+        print(f"Waiting for {POLL_INTERVAL_S} seconds...")
         time.sleep(POLL_INTERVAL_S)
+else:
+    print("Could not connect to WiFi. Rebooting in 10 seconds to try again.")
+    time.sleep(10)
+    machine.reset()
