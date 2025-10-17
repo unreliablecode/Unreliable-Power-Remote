@@ -17,8 +17,6 @@ A stylish and secure PHP web panel designed to remotely power on your PC via an 
 * 🔧 **Easy Configuration:** Sensitive details like API keys and login credentials are kept in a separate `config.php` file for easy setup and better security.
 * 📱 **Responsive Design:** The interface is fully responsive and works great on desktops, tablets, and mobile phones.
 
----
-
 ## ⚙️ How It Works
 
 The system architecture is simple and robust, using a cloud service to decouple the web interface from the hardware.
