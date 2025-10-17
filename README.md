@@ -64,7 +64,7 @@ This is a two-part setup: first the web panel, then the microcontroller.
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/unreliablecode/Unreliable-Power-Remote.git](https://github.com/your-username/Unreliable-Power-Remote.git)
+    git clone [https://github.com/unreliablecode/Unreliable-Power-Remote.git](https://github.com/unreliablecode/Unreliable-Power-Remote.git)
     ```
 
 2.  **Deploy to Server:** Upload the `index.php`, `config.php`, and `logout.php` files to a directory on your web server.
