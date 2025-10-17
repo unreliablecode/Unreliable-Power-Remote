@@ -3,7 +3,6 @@
 A stylish and secure PHP web panel designed to remotely power on your PC via an ESP32/Raspberry Pi. It features a stunning dark-mode, glassmorphism UI with exaggerated, interactive animations for a uniquely satisfying user experience.
 
 <br>
----
 
 ## ✨ Features
 
