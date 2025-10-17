@@ -1,6 +1,6 @@
 # Unreliable PC Power Remote 🚀
 # DOES NOT REQUIRE PORT FORWARDING 🥳
-### secret message: still require port-forwarding for the HTTP/S WebServer to be accessible outside your network, or use some kind of tunneling service like the light and low latency Tailscale 🤯
+### secret message: still require port-forwarding for the HTTP/S WebServer to be accessible outside your network, or use some kind of tunneling service like the lightweight and low latency Tailscale 🤯
 #### A stylish and secure PHP web panel designed to remotely power on your PC via an ESP32/Raspberry Pi. It features a stunning dark-mode, glassmorphism UI with exaggerated, interactive animations for a uniquely satisfying user experience.
 
 <br>
